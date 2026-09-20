@@ -1,0 +1,175 @@
+.home{
+    min-height: calc(100vh - 75px);
+    padding:60px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    gap:50px;
+}
+.home-content{
+    max-width: 650px;
+}
+.intro{
+    font-size: 20px;
+    margin-bottom: 10px;
+    animation: fadeUp 1s ease;
+}
+.home h1{
+    font-size:65px;
+    margin-bottom:20px;
+    padding:20px;
+
+    animation:fadeUp 1.2s ease;
+}
+.home h1 span{
+    color:#38bdf8;
+}
+
+.home h2{
+    font-size:30px;
+    margin-bottom: 20px;
+
+    animation: fadeUp 1.4s ease;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #cbd5e1;
+
+  animation: fadeUp 1.6s ease;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+
+  animation: fadeUp 1.8s ease;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 13px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.primary-btn {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.secondary-btn {
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+  transform: translateY(-5px);
+}
+
+.home-image {
+  animation: floating 3s ease-in-out infinite;
+}
+
+.image-circle {
+  width: 330px;
+  height: 330px;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  border: 5px solid #38bdf8;
+
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.4);
+}
+
+.image-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .home {
+    min-height: auto;
+
+    padding: 70px 5%;
+
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+
+  .home-content {
+    max-width: 100%;
+  }
+
+
+  .home h1 {
+    font-size: 42px;
+  }
+
+
+  .home h2 {
+    font-size: 23px;
+  }
+
+
+  .description {
+    font-size: 16px;
+  }
+
+
+  .home-buttons {
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+
+
+  .image-circle {
+    width: 250px;
+
+    height: 250px;
+  }
+
+}
