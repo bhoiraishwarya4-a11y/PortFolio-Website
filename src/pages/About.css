@@ -1,3 +1,8 @@
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
 .about {
   min-height: 100vh;
   padding: 100px 8%;
@@ -7,9 +12,14 @@
   justify-content: center;
 
   gap: 80px;
+
+  background: #ffffff;
 }
 
-/* Image */
+
+/* =========================
+   IMAGE
+========================= */
 
 .about-image {
   width: 350px;
@@ -17,13 +27,28 @@
 
   flex-shrink: 0;
 
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
 
-  border: 3px solid #38bdf8;
+  border: 3px solid #6c63ff;
 
-  box-shadow: 0 0 35px rgba(56, 189, 248, 0.25);
+  background: #f5f4ff;
+
+  box-shadow:
+    0 15px 40px rgba(108, 99, 255, 0.18);
+
+  position: relative;
+
+  transition: 0.4s ease;
 }
+
+.about-image:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 50px rgba(108, 99, 255, 0.28);
+}
+
 
 .about-image img {
   width: 100%;
@@ -31,112 +56,209 @@
 
   object-fit: cover;
 
-  transition: 0.5s;
+  transition: 0.5s ease;
 }
 
 .about-image:hover img {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 
-/* Content */
+/* =========================
+   CONTENT
+========================= */
 
 .about-content {
   max-width: 650px;
 }
 
+
+/* Small Heading */
+
 .section-subtitle {
-  color: #38bdf8;
-  font-size: 18px;
+  color: #6c63ff;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
   margin-bottom: 10px;
+
+  position: relative;
+  padding-left: 38px;
 }
+
+.section-subtitle::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 50%;
+
+  width: 28px;
+  height: 2px;
+
+  background: #6c63ff;
+
+  transform: translateY(-50%);
+}
+
+
+/* Main Heading */
 
 .about-content h1 {
   font-size: 50px;
+
+  color: #1f2937;
+
   margin-bottom: 25px;
+
+  line-height: 1.2;
 }
 
 .about-content h1 span {
-  color: #38bdf8;
+  color: #6c63ff;
 }
 
+
+/* Paragraph */
+
 .about-content p {
-  color: #5d5d5e;
-  font-size: 17px;
+  color: #5b6472;
+
+  font-size: 16px;
+
   line-height: 1.8;
+
   margin-bottom: 18px;
 }
 
 
-/* Information */
+/* =========================
+   INFORMATION CARDS
+========================= */
 
 .about-info {
   margin-top: 30px;
 
   display: grid;
+
   grid-template-columns: 1fr 1fr;
 
-  gap: 20px;
+  gap: 15px;
 }
+
 
 .about-info div {
   display: flex;
   flex-direction: column;
 
-  gap: 5px;
+  gap: 6px;
 
-  padding: 15px;
+  padding: 16px 18px;
 
-  border-radius: 10px;
+  border-radius: 12px;
 
-  background: rgba(255, 255, 255, 0.04);
+  background: #f8f8ff;
 
-  transition: 0.3s;
+  border: 1px solid #eeeeff;
+
+  transition: all 0.3s ease;
 }
+
 
 .about-info div:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
+
+  border-color: #d9d5ff;
+
+  box-shadow:
+    0 8px 20px rgba(108, 99, 255, 0.10);
 }
+
 
 .about-info strong {
-  color: #38bdf8;
+  color: #6c63ff;
+
+  font-size: 14px;
 }
+
 
 .about-info span {
-  color: #99999a;
+  color: #374151;
+
+  font-size: 14px;
 }
 
 
-/* Button */
+/* =========================
+   RESUME BUTTON
+========================= */
 
 .about-btn {
   display: inline-block;
 
   margin-top: 30px;
 
-  padding: 13px 25px;
+  padding: 13px 26px;
 
-  border-radius: 30px;
+  border-radius: 8px;
 
-  background: #38bdf8;
+  background: linear-gradient(
+    135deg,
+    #6c63ff,
+    #857dff
+  );
 
-  color: #0f172a;
+  color: #ffffff;
 
   text-decoration: none;
 
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: 600;
 
-  transition: 0.3s;
+  box-shadow:
+    0 8px 20px rgba(108, 99, 255, 0.20);
+
+  transition: all 0.3s ease;
 }
+
 
 .about-btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.25);
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 25px rgba(108, 99, 255, 0.30);
 }
 
 
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .about {
+    padding: 80px 5%;
+    gap: 50px;
+  }
+
+  .about-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .about-content h1 {
+    font-size: 44px;
+  }
+}
 
 
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 768px) {
 
@@ -155,7 +277,6 @@
 
   .about-image {
     width: 260px;
-
     height: 260px;
   }
 
@@ -165,8 +286,23 @@
   }
 
 
+  .section-subtitle {
+    padding-left: 0;
+  }
+
+
+  .section-subtitle::before {
+    display: none;
+  }
+
+
   .about-content h1 {
     font-size: 40px;
+  }
+
+
+  .about-content p {
+    font-size: 15px;
   }
 
 
@@ -175,5 +311,4 @@
 
     text-align: left;
   }
-
 }
